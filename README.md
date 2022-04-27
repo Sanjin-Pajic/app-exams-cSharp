@@ -1,1 +1,1 @@
-All the exams from my second year at Faculty of Information Technologies
+All the exams from my Programming III class at Faculty of Information Technologies

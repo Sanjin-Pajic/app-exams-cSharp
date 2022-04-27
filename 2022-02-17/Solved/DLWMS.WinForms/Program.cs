@@ -14,7 +14,7 @@ namespace DLWMS.WinForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Form stratnaForma = new frmGlavna();
+            Form stratnaForma = new frmPretragaIB200262();
             Application.Run(stratnaForma);
         }
     }
