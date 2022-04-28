@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.dgvMain = new System.Windows.Forms.DataGridView();
-            this.txtFilter = new System.Windows.Forms.TextBox();
             this.ImePrezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Predmet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DatumPolaganja = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ocjena = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BrisiPredmet = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Slike = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.txtFilter = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMain)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,14 +60,7 @@
             this.dgvMain.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMain.Size = new System.Drawing.Size(1071, 326);
             this.dgvMain.TabIndex = 0;
-            // 
-            // txtFilter
-            // 
-            this.txtFilter.Location = new System.Drawing.Point(13, 39);
-            this.txtFilter.Name = "txtFilter";
-            this.txtFilter.Size = new System.Drawing.Size(201, 22);
-            this.txtFilter.TabIndex = 1;
-            this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
+            this.dgvMain.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMain_CellContentClick);
             // 
             // ImePrezime
             // 
@@ -120,6 +113,14 @@
             this.Slike.Name = "Slike";
             this.Slike.ReadOnly = true;
             this.Slike.Width = 125;
+            // 
+            // txtFilter
+            // 
+            this.txtFilter.Location = new System.Drawing.Point(13, 39);
+            this.txtFilter.Name = "txtFilter";
+            this.txtFilter.Size = new System.Drawing.Size(201, 22);
+            this.txtFilter.TabIndex = 1;
+            this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
             // 
             // frmPretragaIB200262
             // 

@@ -56,5 +56,25 @@ namespace DLWMS.WinForms.IB200262
         {
             Filtriraj();
         }
+
+        private void dgvMain_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 4)
+            {
+                try
+                {
+                    var odabraniPredmet = dgvMain.SelectedRows[0].DataBoundItem as StudentiPredmeti;
+                    DLWMSdb.Baza.StudentiPredmeti.Remove(odabraniPredmet);
+                    DLWMSdb.Baza.SaveChanges();
+                    UcitajStudente();
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show($"{ex.Message} {Environment.NewLine} {ex.InnerException?.Message}");
+                }
+
+            }
+        }
     }
 }
