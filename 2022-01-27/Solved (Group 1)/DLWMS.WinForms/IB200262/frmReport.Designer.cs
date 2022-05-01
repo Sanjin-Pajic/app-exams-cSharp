@@ -1,6 +1,6 @@
-﻿namespace DLWMS.WinForms.Reports
+﻿namespace DLWMS.WinForms.IB200262
 {
-    partial class frmIzvjestaj
+    partial class frmReport
     {
         /// <summary>
         /// Required designer variable.
@@ -34,22 +34,22 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "DLWMS.WinForms.Reports.rptPotvrda.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "DLWMS.WinForms.IB200262.rptReport.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // frmIzvjestaj
+            // frmReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "frmIzvjestaj";
-            this.Text = "frmIzvjestaj";
-            this.Load += new System.EventHandler(this.frmIzvjestaj_Load);
+            this.Name = "frmReport";
+            this.Text = "frmReport";
+            this.Load += new System.EventHandler(this.frmReport_Load);
             this.ResumeLayout(false);
 
         }

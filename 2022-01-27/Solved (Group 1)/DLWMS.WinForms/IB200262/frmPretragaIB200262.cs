@@ -61,19 +61,26 @@ namespace DLWMS.WinForms.IB200262
         {
             if (e.ColumnIndex == 4)
             {
-                try
+                if (MessageBox.Show("Jeste li sigurni da zelite izbrisati predmet?", "Obavijest", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    var odabraniPredmet = dgvMain.SelectedRows[0].DataBoundItem as StudentiPredmeti;
-                    DLWMSdb.Baza.StudentiPredmeti.Remove(odabraniPredmet);
-                    DLWMSdb.Baza.SaveChanges();
-                    UcitajStudente();
-                }
-                catch (Exception ex)
-                {
+                    try
+                    {
+                        var odabraniPredmet = dgvMain.SelectedRows[0].DataBoundItem as StudentiPredmeti;
+                        DLWMSdb.Baza.StudentiPredmeti.Remove(odabraniPredmet);
+                        DLWMSdb.Baza.SaveChanges();
+                        UcitajStudente();
+                    }
+                    catch (Exception ex)
+                    {
 
-                    MessageBox.Show($"{ex.Message} {Environment.NewLine} {ex.InnerException?.Message}");
+                        MessageBox.Show($"{ex.Message} {Environment.NewLine} {ex.InnerException?.Message}");
+                    }
                 }
 
+            }
+            if (e.ColumnIndex == 5)
+            {
+                var forma = new frmReport().ShowDialog();   
             }
         }
     }
